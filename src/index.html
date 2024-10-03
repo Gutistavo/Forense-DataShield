@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forense DataShield</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Forense DataShield</h1>
+
+    <div class="input-section">
+      <label for="selectFolderButton">Selecione o diretório:</label>
+      <button id="selectFolderButton">Escolher Diretório</button>  <!-- Botão para selecionar a pasta -->
+      <div id="folderPathDisplay"></div>  <!-- Exibe o caminho da pasta selecionada -->
+
+      <label for="userInput">Nome do usuário:</label>
+      <input type="text" id="userInput" placeholder="Digite o nome do usuário">
+
+      <label for="operationInput">Apelido da operação:</label>
+      <input type="text" id="operationInput" placeholder="Digite o apelido da operação">
+
+      <button id="startButton">Iniciar Extração</button>
+    </div>
+
+    <!-- Barra de progresso -->
+    <div class="progress-container">
+      <div id="progressBar"></div>
+    </div>
+
+    <div id="result"></div>
+
+    <div id="finalMessage" class="hidden">
+      <p>Extração completada com sucesso! Você pode acessar as seguintes pastas:</p>
+      <button id="openExtractionDir">Abrir Pasta de Extração</button>
+      <button id="openLogDir">Abrir Pasta de Logs</button>
+      <button id="newOperationButton">Nova Operação</button> <!-- Botão de Nova Operação -->
+    </div>
+  </div>
+
+  <script src="renderer.js" defer></script>
+</body>
+</html>
